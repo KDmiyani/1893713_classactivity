@@ -1,84 +1,83 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vvww"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
     <ImageView
-        android:id="@+id/img1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/green"
-
-
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
         android:id="@+id/img2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/fname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground"
         tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fname"/>
+        tools:layout_editor_absoluteY="0dp" />
 
     <EditText
         android:id="@+id/fname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="117dp"
-        app:layout_constraintTop_toBottomOf="@id/img2"
+        android:hint="Enter Name"
+        app:layout_constraintBottom_toTopOf="@id/lname"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        
-        />
+        app:layout_constraintTop_toBottomOf="@id/img2" />
 
     <EditText
         android:id="@+id/lname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="181dp" />
+        android:hint="Enter Last Name"
+        app:layout_constraintBottom_toTopOf="@id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fname" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="332dp" />
+        android:hint="Enter password"
+        app:layout_constraintBottom_toTopOf="@id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="395dp" />
-
+        android:text="submit"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="452dp" />
 
 
     <Button
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="455dp" />
+        android:text="close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/submit" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter email"
+        app:layout_constraintBottom_toTopOf="@id/pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lname" />
 
 
 </android.support.constraint.ConstraintLayout>
